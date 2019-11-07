@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/bmp"
+        android:layout_width="357dp"
+        android:layout_height="448dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:src="@drawable/image"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <Button
+        android:id="@+id/togray"
+        android:layout_width="173dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="61dp"
+        android:layout_marginLeft="61dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="79dp"
+        android:layout_marginRight="79dp"
+        android:layout_marginBottom="24dp"
+        android:text="Gray out image"
+        app:layout_constraintBottom_toTopOf="@+id/reset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/contrast"
+        app:layout_constraintTop_toBottomOf="@+id/blue"
+        tools:ignore="DuplicateIds,NotSibling" />
+
+    <Button
+        android:id="@+id/contrast"
+        android:layout_width="98dp"
+        android:layout_height="46dp"
+        android:text="Contrast"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_id"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bmp"
+        app:layout_constraintVertical_bias="0.316"
+        tools:ignore="DuplicateIds,NotSibling" />
+
+    <Button
+        android:id="@+id/red"
+        android:layout_width="74dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="204dp"
+        android:layout_marginLeft="204dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginRight="45dp"
+        android:text="Red"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_id"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bmp"
+        app:layout_constraintVertical_bias="0.108"
+        tools:ignore="DuplicateIds,NotSibling" />
+
+    <Button
+        android:id="@+id/green"
+        android:layout_width="79dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginRight="54dp"
+        android:layout_marginBottom="3dp"
+        android:text="Keep red"
+        app:layout_constraintBottom_toTopOf="@+id/togray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/red"
+        app:layout_constraintTop_toBottomOf="@+id/bmp"
+        tools:ignore="DuplicateIds" />
+
+    <Button
+        android:id="@+id/blue"
+        android:layout_width="68dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="1dp"
+        android:text="Blue"
+        app:layout_constraintBottom_toTopOf="@+id/togray"
+        app:layout_constraintEnd_toStartOf="@+id/red"
+        app:layout_constraintStart_toEndOf="@+id/convolve"
+        app:layout_constraintTop_toBottomOf="@+id/bmp"
+        app:layout_constraintVertical_chainStyle="spread_inside"
+        tools:ignore="DuplicateIds" />
+
+    <Button
+        android:id="@+id/convolve"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+        android:layout_marginEnd="316dp"
+        android:layout_marginRight="316dp"
+        android:layout_marginBottom="196dp"
+        android:text="Convolve"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="DuplicateIds" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="608dp"
+        android:layout_marginEnd="148dp"
+        android:layout_marginRight="148dp"
+        android:text="Reset image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="DuplicateIds" />
+
+</android.support.constraint.ConstraintLayout>
